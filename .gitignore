@@ -33,5 +33,6 @@ vignettes/*.pdf
 *.knit.md
 
 # Windows files
-[Dd]esktop.ini
+desktop.ini
+Desktop.ini
 *.bak
