@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="90" y="126" />
+        <Position x="54" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -25,9 +25,6 @@
           <DefaultAnnotationText>train.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="PassengerId" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
@@ -49,20 +46,17 @@
     </Node>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
-        <Position x="282" y="126" />
+        <Position x="342" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Fields>
-            <Field field="PassengerId" selected="True" />
             <Field field="Survived" selected="True" />
             <Field field="Pclass" selected="True" />
-            <Field field="Name" selected="True" />
             <Field field="Sex" selected="True" />
             <Field field="Age" selected="True" />
             <Field field="SibSp" selected="True" />
             <Field field="Parch" selected="True" />
-            <Field field="Ticket" selected="True" />
             <Field field="Fare" selected="True" />
             <Field field="Cabin" selected="True" />
             <Field field="Embarked" selected="True" />
@@ -85,6 +79,7 @@
             <Field name="Fare" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Double" />
             <Field name="Cabin" size="15" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_String" />
             <Field name="Embarked" size="1" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="String" />
+            <Field name="sex (int)" source="Formula: IF [Sex]='female' then 1 else 0 endif" type="Byte" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -92,11 +87,11 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="486" y="54" />
+        <Position x="534" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_6bd821282c774ee4b31f02954f3c2302_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_4359f0e1cc114a4aab691459aaae4076_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -120,11 +115,11 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings>
-        <Position x="378" y="54" />
+        <Position x="438" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Value name="Select Fields">PassengerId=True,Survived=True,Pclass=True,Name=True,Sex=True,Age=True,SibSp=True,Parch=True,Ticket=True,Fare=True,Cabin=True,Embarked=True</Value>
+          <Value name="Select Fields">Survived=True,Pclass=True,Sex=True,Age=True,SibSp=True,Parch=True,Fare=True,Cabin=True,Embarked=True</Value>
           <Value name="Sample Data">False</Value>
           <Value name="Number">True</Value>
           <Value name="NNumber">5000</Value>
@@ -136,15 +131,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
     </Node>
     <Node ToolID="5">
       <GuiSettings>
-        <Position x="378" y="114" />
+        <Position x="438" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -162,19 +154,16 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Predictive Tools\ContingencyTable.yxmc" />
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="486" y="114" />
+        <Position x="534" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_38b8a454e9f14548a7febc05e2d56757_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_da63520912464c509ae843a2a6381ec9_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -198,7 +187,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="186" y="126" />
+        <Position x="150" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -221,14 +210,14 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings>
-        <Position x="378" y="174" />
+        <Position x="438" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Value name="do target">True</Value>
           <Value name="target">Survived</Value>
           <Value name="target level">1</Value>
-          <Value name="use fields">"Pclass","Age","SibSp","Parch","Fare"</Value>
+          <Value name="use fields">"Survived","Pclass","Age","SibSp","Parch","Fare","sex (int)"</Value>
           <Value name="Pearson">True</Value>
           <Value name="Spearman">False</Value>
           <Value name="Hoeffding">False</Value>
@@ -238,19 +227,16 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Predictive Tools\Association_Analysis.yxmc" />
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="486" y="174" />
+        <Position x="534" y="318" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_036462756d2d4dc68503830365a3d903_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_615a79de188346b3a572a460d2938b2c_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -271,6 +257,178 @@
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_76ec75d60f5d4b82bd58334145c26640_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_2bb9eadd337e45d39505cc1da6c29192_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_fb443cbb9bd8439287abd2001fe8ace2_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerRender.PortfolioComposerRender">
+        <Position x="618" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileType />
+          <OutputFile>.\01_raw_data\Correlation_Report.png</OutputFile>
+          <BatchMode value="False" />
+          <DataField>Layout</DataField>
+          <Separator>Continuous</Separator>
+          <ShowHeader value="False" />
+          <ShowFooter value="False" />
+          <PortraitMode value="True" />
+          <PaperType Width="595" Height="566" Left="0" Right="0" Top="0" Bottom="0" />
+          <DefaultStyles>
+            <Style Name="TextStyle" FontName="Arial" FontSize="14" Justify="Left" ForeColor="#000000" Locale="2057" />
+          </DefaultStyles>
+          <PNGResolution>3</PNGResolution>
+          <PNGLargerAction>stretchPage</PNGLargerAction>
+          <PNGLargerThanPageChoice>ignore</PNGLargerThanPageChoice>
+          <PNGTransparentBG value="False" />
+          <PNGBackColor value="#ffffff" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Sex]='female' then 1 else 0 endif" field="sex (int)" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[sex (int) = IF [Sex]='female' then 1 else 0 endif
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerRender.PortfolioComposerRender">
+        <Position x="618" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileType />
+          <OutputFile>.\01_raw_data\Field_Summary_Report_.png</OutputFile>
+          <BatchMode value="True" />
+          <GroupField>Desc</GroupField>
+          <FilenameModifier>Append</FilenameModifier>
+          <DataField>Report</DataField>
+          <Separator>Continuous</Separator>
+          <ShowHeader value="False" />
+          <ShowFooter value="False" />
+          <PortraitMode value="True" />
+          <PaperType Width="595" Height="566" Left="0" Right="0" Top="0" Bottom="0" />
+          <DefaultStyles>
+            <Style Name="TextStyle" FontName="Arial" FontSize="14" Justify="Left" ForeColor="#000000" Locale="2057" />
+          </DefaultStyles>
+          <PNGResolution>3</PNGResolution>
+          <PNGLargerAction>stretchPage</PNGLargerAction>
+          <PNGLargerThanPageChoice>ignore</PNGLargerThanPageChoice>
+          <PNGTransparentBG value="False" />
+          <PNGBackColor value="#ffffff" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
     </Node>
   </Nodes>
   <Connections>
@@ -295,16 +453,40 @@
       <Destination ToolID="3" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="4" Connection="Reports" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Reports" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="5" Connection="Interactive Pivot" />
       <Destination ToolID="6" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="5" Connection="Report" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="7" Connection="Output" />
-      <Destination ToolID="2" Connection="Input" />
+      <Destination ToolID="14" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="8" Connection="Correlation Matrix" />
       <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
