@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">.\01_raw_data\train.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>65001</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>train.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PassengerId" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Survived" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Pclass" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Name" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Sex" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Age" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="SibSp" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Parch" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Ticket" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Fare" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Cabin" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+            <Field name="Embarked" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="282" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="PassengerId" selected="True" />
+            <Field field="Survived" selected="True" />
+            <Field field="Pclass" selected="True" />
+            <Field field="Name" selected="True" />
+            <Field field="Sex" selected="True" />
+            <Field field="Age" selected="True" />
+            <Field field="SibSp" selected="True" />
+            <Field field="Parch" selected="True" />
+            <Field field="Ticket" selected="True" />
+            <Field field="Fare" selected="True" />
+            <Field field="Cabin" selected="True" />
+            <Field field="Embarked" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Survived" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Byte" />
+            <Field name="Pclass" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Byte" />
+            <Field name="Sex" size="6" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="String" />
+            <Field name="Age" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Double" />
+            <Field name="SibSp" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Byte" />
+            <Field name="Parch" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Byte" />
+            <Field name="Fare" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="Double" />
+            <Field name="Cabin" size="15" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="V_String" />
+            <Field name="Embarked" size="1" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\train.csv" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="486" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_6bd821282c774ee4b31f02954f3c2302_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="378" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Select Fields">PassengerId=True,Survived=True,Pclass=True,Name=True,Sex=True,Age=True,SibSp=True,Parch=True,Ticket=True,Fare=True,Cabin=True,Embarked=True</Value>
+          <Value name="Sample Data">False</Value>
+          <Value name="Number">True</Value>
+          <Value name="NNumber">5000</Value>
+          <Value name="Percent">False</Value>
+          <Value name="NPercent">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings>
+        <Position x="378" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="ChiSquare">True</Value>
+          <Value name="Var1 Chi">Survived</Value>
+          <Value name="Var2 Chi">SibSp</Value>
+          <Value name="NoChiSquare">False</Value>
+          <Value name="Var1">Survived</Value>
+          <Value name="Var2">Survived</Value>
+          <Value name="Var3" />
+          <Value name="Var4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\ContingencyTable.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="486" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_38b8a454e9f14548a7febc05e2d56757_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="PassengerId" selected="False" />
+            <SelectField field="Name" selected="False" />
+            <SelectField field="Ticket" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings>
+        <Position x="378" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="do target">True</Value>
+          <Value name="target">Survived</Value>
+          <Value name="target level">1</Value>
+          <Value name="use fields">"Pclass","Age","SibSp","Parch","Fare"</Value>
+          <Value name="Pearson">True</Value>
+          <Value name="Spearman">False</Value>
+          <Value name="Hoeffding">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Association_Analysis.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="486" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_12244_f6c8116a8bae47e991d621bfc39f7374_\Engine_20632_036462756d2d4dc68503830365a3d903_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="8" Connection="Data Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Interactive" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Interactive Pivot" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Correlation Matrix" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>01_titanic_exploration</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
