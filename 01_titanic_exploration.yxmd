@@ -91,7 +91,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_4359f0e1cc114a4aab691459aaae4076_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_75f35f917eeb4fc385cafe553ad1d017_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -140,20 +140,23 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Value name="ChiSquare">True</Value>
+          <Value name="ChiSquare">False</Value>
           <Value name="Var1 Chi">Survived</Value>
           <Value name="Var2 Chi">SibSp</Value>
-          <Value name="NoChiSquare">False</Value>
+          <Value name="NoChiSquare">True</Value>
           <Value name="Var1">Survived</Value>
-          <Value name="Var2">Survived</Value>
-          <Value name="Var3" />
-          <Value name="Var4" />
+          <Value name="Var2">Pclass</Value>
+          <Value name="Var3">Sex</Value>
+          <Value name="Var4">SibSp</Value>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
       </Properties>
       <EngineSettings Macro="Predictive Tools\ContingencyTable.yxmc" />
     </Node>
@@ -163,7 +166,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_da63520912464c509ae843a2a6381ec9_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_bda1a14802ce4b0c88dc2c82bdb00542_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -236,7 +239,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_615a79de188346b3a572a460d2938b2c_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_f40dbe0af4b24cb9bd0a01f3776f6dbe_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -264,7 +267,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_76ec75d60f5d4b82bd58334145c26640_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_f1c233e8148a4f748fb95ac7cb5f662e_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -292,7 +295,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_2bb9eadd337e45d39505cc1da6c29192_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_0b1f977ad00647baaae19fd10c658576_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -320,7 +323,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_2492_3910dfe69c4146fe83d162f161e6fc90_\Engine_11160_fb443cbb9bd8439287abd2001fe8ace2_.yxdb</TempFile>
+          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_16756_838f2f2d6853420980f768f2781a5c08_\Engine_16852_eab4dea10d854a87b5a28eadebe6e12b_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -424,9 +427,6 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
     </Node>
