@@ -3,17 +3,17 @@
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
-        <Position x="403" y="290" />
+        <Position x="404" y="290.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Directory>.</Directory>
+          <Directory>./</Directory>
           <FileSpec>*.yxdb</FileSpec>
           <IncludeSubDirs value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>dir .\*.yxdb</DefaultAnnotationText>
+          <DefaultAnnotationText>dir ./*.yxdb</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -21,7 +21,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="523" y="290" />
+        <Position x="524" y="290.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -39,13 +39,13 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
-        <Position x="631" y="290" />
+        <Position x="632" y="290.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <GroupFields orderChanged="False" />
           <Mode>First</Mode>
           <N>1</N>
+          <GroupFields orderChanged="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -57,7 +57,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="Score">
-        <Position x="871" y="194" />
+        <Position x="872" y="194" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -105,7 +105,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
-        <Position x="727" y="290" />
+        <Position x="728" y="290.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -130,7 +130,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1075" y="194" />
+        <Position x="1076" y="194" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -139,6 +139,7 @@
           <SelectFields>
             <SelectField field="PassengerId" selected="True" />
             <SelectField field="Survived" selected="True" />
+            <SelectField field="date" selected="True" />
             <SelectField field="*Unknown" selected="False" />
           </SelectFields>
         </Configuration>
@@ -152,18 +153,19 @@
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="979" y="194" />
+        <Position x="980" y="194" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
             <FormulaField expression="if [X_0]&gt;0.5 then 0 else 1 endif" field="Survived" size="1" type="Byte" />
+            <FormulaField expression="DateTimeFormat(DateTimeToday(),'%Y%m%d')" field="date" size="1073741823" type="V_WString" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[Survived = if [X_0]>0.5 then 0 else 1 endif
-]]></DefaultAnnotationText>
+          <DefaultAnnotationText>Survived = if [X_0]&gt;0.5 then 0 else 1 endif
+date = DateTimeFormat(DateTimeToday(...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -171,11 +173,11 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="1183" y="194" />
+        <Position x="1184" y="194" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <File MaxRecords="" FileFormat="0">..\02_models\random_forest_v1.csv</File>
+          <File MaxRecords="" FileFormat="0">..\02_models\random_forest_v.csv</File>
           <Passwords />
           <FormatSpecificOptions>
             <LineEndStyle>CRLF</LineEndStyle>
@@ -185,11 +187,14 @@
             <CodePage>65001</CodePage>
             <WriteBOM>True</WriteBOM>
           </FormatSpecificOptions>
-          <MultiFile value="False" />
+          <MultiFile value="True" />
+          <MultiFileType>Suffix</MultiFileType>
+          <MultiFileField>date</MultiFileField>
+          <KeepField value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>random_forest_v1.csv</DefaultAnnotationText>
+          <DefaultAnnotationText>random_forest_v.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <Dependencies>
@@ -200,7 +205,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="53" y="53.99995" width="739" height="205.0001" />
+        <Position x="54" y="54" width="739" height="205" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -218,7 +223,7 @@
       <ChildNodes>
         <Node ToolID="5">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="78" y="97.99995" />
+            <Position x="79" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -260,7 +265,7 @@
         </Node>
         <Node ToolID="7">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
-            <Position x="283" y="98.00002" />
+            <Position x="284" y="98.00008" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -286,16 +291,16 @@
             </Annotation>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="PassengerId" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
+                <Field name="PassengerId" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="Int16" />
                 <Field name="Pclass" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Name" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Sex" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Age" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="SibSp" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Parch" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Ticket" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Fare" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
-                <Field name="Embarked" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_WString" />
+                <Field name="Name" size="63" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_String" />
+                <Field name="Sex" size="6" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="String" />
+                <Field name="Age" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="Double" />
+                <Field name="SibSp" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="Byte" />
+                <Field name="Parch" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="Byte" />
+                <Field name="Ticket" size="18" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="V_String" />
+                <Field name="Fare" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="Double" />
+                <Field name="Embarked" size="1" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\01_raw_data\test.csv" type="String" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -303,7 +308,7 @@
         </Node>
         <Node ToolID="8">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="379" y="134" />
+            <Position x="380" y="134" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -322,7 +327,7 @@
         </Node>
         <Node ToolID="9">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="475" y="110" />
+            <Position x="476" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -349,7 +354,7 @@
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="571" y="110" />
+            <Position x="572" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -369,7 +374,7 @@
         </Node>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="180" y="98" />
+            <Position x="181" y="98.00005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -391,7 +396,7 @@
         </Node>
         <Node ToolID="12">
           <GuiSettings>
-            <Position x="667" y="110" />
+            <Position x="668" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>

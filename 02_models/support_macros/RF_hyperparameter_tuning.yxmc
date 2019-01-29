@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="Score">
-        <Position x="570" y="210" />
+        <Position x="546" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -68,6 +68,7 @@
         <Position x="0" y="0" width="59" height="59" />
       </GuiSettings>
       <Properties>
+        <Configuration />
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
@@ -77,7 +78,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="378" y="150" />
+        <Position x="354" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -109,9 +110,6 @@
           <DefaultAnnotationText>testing.csv</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="PassengerId" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\02_models\support_macros\testing.csv" type="V_WString" />
@@ -130,7 +128,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="102" y="258" />
+        <Position x="78" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -162,9 +160,6 @@
           <DefaultAnnotationText>Training.csv</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="PassengerId" size="254" source="File: G:\My Drive\Paul Houghton\Blog posts\AT Stack DS\titanic-tutorial\02_models\support_macros\Training.csv" type="V_WString" />
@@ -183,7 +178,7 @@
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
-        <Position x="78" y="6" width="59" height="59" />
+        <Position x="54" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -196,7 +191,7 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="138" y="114" width="59" height="59" />
+        <Position x="114" y="162" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -209,20 +204,21 @@
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="690" y="210" />
+        <Position x="666" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[#1] + ' vars per tree - ' + [#2] + ' max depth'" field="Parameter Config" size="1073741823" type="V_WString" />
+            <FormulaField expression="[#1] + ' vars per tree - ' " field="Vars per tree" size="1073741823" type="V_WString" />
+            <FormulaField expression="[#2] + ' max depth'" field="tree max depth" size="1073741823" type="V_WString" />
             <FormulaField expression="if [survival_1]&gt;0.5 then 1 else 0 endif" field="Prediction" size="64" type="String" />
             <FormulaField expression="IF [Prediction]=[Survived] THEN 1 ELSE 0 ENDIF" field="Correct?" size="1" type="Byte" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Parameter Config = [#1] + ' vars per tree - ' + [#2] + ' max depth'
-Prediction =...</DefaultAnnotationText>
+          <DefaultAnnotationText>Vars per tree = [#1] + ' vars per tree - ' 
+tree max depth = [#2] + ' max depth'...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -238,7 +234,8 @@ Prediction =...</DefaultAnnotationText>
             <Field name="Embarked" size="1073741823" source="R-DATA:" type="V_WString" />
             <Field name="survival_0" source="R-DATA:" type="Double" />
             <Field name="survival_1" source="R-DATA:" type="Double" />
-            <Field name="Parameter Config" size="1073741823" source="Formula: [#1] + ' vars per tree - ' + [#2] + ' max depth'" type="V_WString" />
+            <Field name="Vars per tree" size="1073741823" source="Formula: [#1] + ' vars per tree - ' " type="V_WString" />
+            <Field name="tree max depth" size="1073741823" source="Formula: [#2] + ' max depth'" type="V_WString" />
             <Field name="Prediction" size="64" source="Formula: if [survival_1]&gt;0.5 then 1 else 0 endif" type="String" />
             <Field name="Correct?" source="Formula: IF [Prediction]=[Survived] THEN 1 ELSE 0 ENDIF" type="Byte" />
           </RecordInfo>
@@ -248,7 +245,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1026" y="222" />
+        <Position x="1002" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -265,7 +262,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="14">
       <GuiSettings>
-        <Position x="294" y="258" />
+        <Position x="270" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -295,9 +292,6 @@ Prediction =...</DefaultAnnotationText>
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Reports">
           <RecordInfo>
             <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_WString" />
@@ -315,7 +309,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="210" y="258" />
+        <Position x="186" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -357,7 +351,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="450" y="150" />
+        <Position x="426" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -399,12 +393,13 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="786" y="210" />
+        <Position x="762" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <SummarizeFields>
-            <SummarizeField field="Parameter Config" action="GroupBy" rename="Parameter Config" />
+            <SummarizeField field="Vars per tree" action="GroupBy" rename="Vars per tree" />
+            <SummarizeField field="tree max depth" action="GroupBy" rename="tree max depth" />
             <SummarizeField field="Correct?" action="Avg" rename="Prediction_accuracy" />
           </SummarizeFields>
         </Configuration>
@@ -415,11 +410,13 @@ Prediction =...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Parameter Config" size="1073741823" source="Summarize: GroupBy - Parameter Config" type="V_WString" />
+            <Field name="Vars per tree" size="1073741823" source="Summarize: GroupBy - Vars per tree" type="V_WString" />
+            <Field name="tree max depth" size="1073741823" source="Summarize: GroupBy - tree max depth" type="V_WString" />
             <Field name="Prediction_accuracy" source="Summarize: Avg - Correct?" type="Double" />
           </RecordInfo>
           <SortInfo>
-            <Field field="Parameter Config" order="Asc" />
+            <Field field="Vars per tree" order="Asc" />
+            <Field field="tree max depth" order="Asc" />
           </SortInfo>
         </MetaInfo>
       </Properties>
@@ -427,7 +424,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="486" y="318" />
+        <Position x="462" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -450,7 +447,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="870" y="222" />
+        <Position x="846" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="True">
@@ -471,13 +468,15 @@ Prediction =...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Parameter Config" size="1073741823" source="Summarize: GroupBy - Parameter Config" type="V_WString" />
+            <Field name="Vars per tree" size="1073741823" source="Summarize: GroupBy - Vars per tree" type="V_WString" />
+            <Field name="tree max depth" size="1073741823" source="Summarize: GroupBy - tree max depth" type="V_WString" />
             <Field name="Prediction_accuracy" source="Summarize: Avg - Correct?" type="Double" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Join">
           <RecordInfo>
-            <Field name="Parameter Config" size="1073741823" source="Summarize: GroupBy - Parameter Config" type="V_WString" />
+            <Field name="Vars per tree" size="1073741823" source="Summarize: GroupBy - Vars per tree" type="V_WString" />
+            <Field name="tree max depth" size="1073741823" source="Summarize: GroupBy - tree max depth" type="V_WString" />
             <Field name="Prediction_accuracy" source="Summarize: Avg - Correct?" type="Double" />
             <Field name="RptVertical_Report" size="1073741823" source="Report:Layout:Summarize:RptVertical" type="V_WString" />
           </RecordInfo>
@@ -492,7 +491,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="222" y="114" width="59" height="59" />
+        <Position x="198" y="162" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -505,7 +504,7 @@ Prediction =...</DefaultAnnotationText>
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
-        <Position x="198" y="6" width="59" height="59" />
+        <Position x="174" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -666,7 +665,7 @@ Prediction =...</DefaultAnnotationText>
               <Mode>Simple</Mode>
               <Variable />
               <Replace value="False" />
-              <Destination>14/Value[@name='max.depth']</Destination>
+              <Destination>14/Value[@name='total.nodes']</Destination>
             </Action>
           </True>
         </NoCondition>
@@ -734,11 +733,11 @@ Prediction =...</DefaultAnnotationText>
       <Wiz_CustomGraphic value="False" />
       <Wiz_ShowOutput value="True" />
       <Wiz_OpenOutputTools>
-        <Tool ToolId="14" Selected="True" />
         <Tool ToolId="2" Selected="True" />
         <Tool ToolId="8" Selected="True" />
         <Tool ToolId="9" Selected="True" />
         <Tool ToolId="13" Selected="True" />
+        <Tool ToolId="14" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
