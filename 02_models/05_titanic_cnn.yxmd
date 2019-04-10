@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="97.99998" />
+        <Position x="54" y="103" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -46,7 +46,7 @@
     </Node>
     <Node ToolID="34">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
-        <Position x="243" y="97.99998" />
+        <Position x="243" y="103" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -91,7 +91,7 @@
     </Node>
     <Node ToolID="38">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="148" y="97.99998" />
+        <Position x="148" y="103" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -111,64 +111,16 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="81">
-      <GuiSettings>
-        <Position x="894" y="114" />
+    <Node ToolID="90">
+      <GuiSettings Plugin="JupyterCode">
+        <Position x="870" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Value name="model.name">deep</Value>
-          <Value name="select.target">Survived</Value>
-          <Value name="select.predictors">PassengerId=False,Survived=False,Pclass=True,Sex=True,Age=True,SibSp=True,Parch=True,Fare=True,Embarked=True</Value>
-          <Value name="use.weights">False</Value>
-          <Value name="select.weights">PassengerId</Value>
-          <Value name="num.nodes">50</Value>
-          <Value name="marginal.plots">True</Value>
-          <Value name="custom.scaling">False</Value>
-          <Value name="scale.type">zero-centered</Value>
-          <Value name="decay">0.100</Value>
-          <Value name="range">0.700</Value>
-          <Value name="max.wts">1000</Value>
-          <Value name="max.iter">100</Value>
-          <Value name="inches">True</Value>
-          <Value name="in.w">5.50</Value>
-          <Value name="in.h">5.50</Value>
-          <Value name="centimeters">False</Value>
-          <Value name="cm.w">13.00</Value>
-          <Value name="cm.h">14.95</Value>
-          <Value name="graph.resolution">3x</Value>
-          <Value name="pointsize">10</Value>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-      </Properties>
-      <EngineSettings Macro="Predictive Tools\Neural_Network.yxmc" />
-    </Node>
-    <Node ToolID="82">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="990" y="126" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>C:\Users\paulj\AppData\Local\Temp\Engine_8928_c2920520aca040d995ff3f6dbd6a4c77_\Engine_2192_479198574d8641739af32af096a29b0b_.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Report</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":"Run `Alteryx.help()` for info about useful functions.  \ni.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"},{"cell_type":"code","execution_count":null,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"},"trusted":true},"outputs":[],"source":"# List all non-standard packages to be imported by your \n# script here (only missing packages will be installed)\nfrom ayx import Package\n#Package.installPackages(['pandas','numpy'])"},{"cell_type":"code","execution_count":null,"metadata":{"trusted":true},"outputs":[],"source":"from ayx import Alteryx\n\n"}],"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.6.0"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <Port>52840</Port>
+          <WorkflowName>g:\my drive\paul houghton\blog posts\at stack ds\titanic-tutorial\02_models\05_titanic_cnn.yxmd</WorkflowName>
+          <specialCellMetadata>[{"label":"info","contents_keyword":"Alteryx.help()","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","first_line":"Run `Alteryx.help()` for info about useful functions.","cell_type":"markdown","cell_class":"text_cell"},{"label":"deps","contents_keyword":"installPackages","cell_css":"border: 1px solid #58a; margin: 2px;","first_line":"# List all non-standard packages to be imported by your","cell_type":"code","cell_class":"code_cell"}]</specialCellMetadata>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -176,96 +128,11 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
-    <Node ToolID="84">
-      <GuiSettings Plugin="Score">
-        <Position x="990" y="66" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Value name="modelChoice">Local Model</Value>
-          <Value name="score field">score</Value>
-          <Value name="is oversampled">False</Value>
-          <Value name="oversampled value">
-          </Value>
-          <Value name="original percent">2</Value>
-          <Value name="log y">False</Value>
-          <Value name="prediction.interval">False</Value>
-          <Value name="interval.level">95</Value>
-          <Value name="append.xdf">False</Value>
-          <Value name="num.records">256000</Value>
-          <Value name="credentials">
-          </Value>
-          <Value name="models">
-          </Value>
-          <Value name="page">
-          </Value>
-          <Value name="errorStatus">
-          </Value>
-          <Value name="modelDetailJSON">
-          </Value>
-          <Value name="modelDetails">{"Name":"","Owner":"","Status":"","Id":"","LastDeployment":"","LastUpdated":"","LatestVersion":"","ActiveVersion":"","NumReplications":"","NumVersions":""}</Value>
-          <Value name="promoteURL">
-          </Value>
-          <Value name="username">
-          </Value>
-          <Value name="model_name">
-          </Value>
-          <Value name="model_owner">
-          </Value>
-          <Value name="apiKey">
-          </Value>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings Macro="Score\Supporting_Macros\score-engine.yxmc" EngineDll="Macro" EngineDllEntryPoint="Score\Supporting_Macros\score-engine.yxmc" />
-    </Node>
-    <Node ToolID="85">
-      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1182" y="66" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <SummarizeFields>
-            <SummarizeField field="correct?" action="Avg" rename="Avg_correct?" />
-          </SummarizeFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-    </Node>
-    <Node ToolID="86">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1086" y="66" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="if [score_1]&gt;0.5 then 1 else 0 endif" field="prediction" size="1" type="String" />
-            <FormulaField expression="if [prediction]=[Survived] then 1 else 0 endif" field="correct?" size="1" type="Byte" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>prediction = if [score_1]&gt;0.5 then 1 else 0 endif
-correct? = if [prediction]=[Su...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
     </Node>
     <Node ToolID="83">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="330" y="49" width="525" height="165" />
+        <Position x="330" y="54" width="498" height="165" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -283,7 +150,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="35">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="340" y="107" />
+            <Position x="340" y="112" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -302,7 +169,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
         </Node>
         <Node ToolID="36">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="434.0001" y="82.99994" />
+            <Position x="434.0001" y="87.99994" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -329,7 +196,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
         </Node>
         <Node ToolID="37">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="528.0001" y="83.00005" />
+            <Position x="528.0001" y="88.00005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -349,7 +216,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
         </Node>
         <Node ToolID="39">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="714" y="78" />
+            <Position x="714" y="83" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -373,7 +240,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
         </Node>
         <Node ToolID="40">
           <GuiSettings>
-            <Position x="623.0001" y="83.00001" />
+            <Position x="623.0001" y="88.00001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -397,27 +264,6 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <EngineSettings Macro="Cleanse.yxmc" />
-        </Node>
-        <Node ToolID="87">
-          <GuiSettings>
-            <Position x="786" y="78" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Value name="estimation pct">70</Value>
-              <Value name="validation pct">30</Value>
-              <Value name="rand seed">1</Value>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
-          </Properties>
-          <EngineSettings Macro="Predictive Tools\Create_Samples.yxmc" />
         </Node>
       </ChildNodes>
     </Node>
@@ -444,26 +290,6 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
       <Destination ToolID="34" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="81" Connection="Report" />
-      <Destination ToolID="82" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="81" Connection="Output" />
-      <Destination ToolID="84" Connection="Model" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="87" Connection="Validation" />
-      <Destination ToolID="84" Connection="Data" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="84" Connection="Output" />
-      <Destination ToolID="86" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="86" Connection="Output" />
-      <Destination ToolID="85" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="36" Connection="Output" />
       <Destination ToolID="37" Connection="Input" />
     </Connection>
@@ -471,17 +297,13 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
       <Origin ToolID="37" Connection="Output" />
       <Destination ToolID="40" Connection="Input2" />
     </Connection>
-    <Connection>
+    <Connection name="#1">
       <Origin ToolID="39" Connection="Output" />
-      <Destination ToolID="87" Connection="Input" />
+      <Destination ToolID="90" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="40" Connection="Output26" />
       <Destination ToolID="39" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="87" Connection="Estimation" />
-      <Destination ToolID="81" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -502,7 +324,7 @@ correct? = if [prediction]=[Su...</DefaultAnnotationText>
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>04_titanic_neural_network</Name>
+      <Name>05_titanic_cnn</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
